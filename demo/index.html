@@ -1,20 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Demo library framework</title>
 
-    <script src="../dist/my-library.js"></script>
-  </head>
-  <body>
-    <p id="is-prime"></p>
-    <p id="is-not-prime"></p>
-    <script>
-      const { isPrimeNumber } = window.MyLibrary;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yet Another Game Controller Library</title>
 
-      document.querySelector('#is-prime').innerHTML = isPrimeNumber(3);
-      document.querySelector('#is-not-prime').innerHTML = isPrimeNumber(4);
-    </script>
-  </body>
+  <script src="../dist/yagcl.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: monospace;
+      width: 100%;
+      height: 100%;
+    }
+
+    #eventsDisplay {
+      position: absolute;
+      background-color: #000;
+      transition: 0.5s;
+      height: 100%;
+      width: 100%;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+
+    #events {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      font-size: 2rem;
+      line-height: 3rem;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: flex-start;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="eventsDisplay">
+    <div id="events">
+      <div id="placeholder">Press any controller input</div>
+    </div>
+  </div>
+  <script>
+    const { GamepadListener } = window.YAGCL;
+    let gamepadListener = new GamepadListener({ analog: false });
+    gamepadListener.start();
+    gamepadListener.on('connected', (gamepad) => {
+      console.log('Gamepad connected:', gamepad);
+    });
+    gamepadListener.on('disconnected', (gamepad) => {
+      console.log('Gamepad disconnected:', gamepad);
+    });
+    gamepadListener.on('buttondown', ({ gamepad, index }) => {
+      document.getElementById('events').innerHTML += `<div class="event">Gamepad ${gamepad.index} Button ${index} down.</div>`;
+    });
+    gamepadListener.on('buttonup', ({ gamepad, index }) => {
+      document.getElementById('events').innerHTML += `<div class="event">Gamepad ${gamepad.index} Button ${index} up.</div>`;
+    });
+    gamepadListener.on('axis', ({ gamepad, index, value }) => {
+      document.getElementById('events').innerHTML += `<div class="event">Gamepad ${gamepad.index} Axis ${index} moved to ${value.toFixed(3)}.</div>`;
+    });
+  </script>
+</body>
+
 </html>
