@@ -1,2 +1,2 @@
-# YAGL.js
-Yet Another Gamepad Library
+# YAGCL.js
+Yet Another Game Controller Library
