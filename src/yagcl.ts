@@ -1,3 +1,3 @@
 import GamepadListener from './classes/GamepadListener';
 
-export { GamepadListener };
+export default GamepadListener;
