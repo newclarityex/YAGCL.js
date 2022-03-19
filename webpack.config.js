@@ -6,13 +6,14 @@ const config = {
   entry: {
     index: './src/yagcl.ts',
   },
+  experiments: {
+    outputModule: true,
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'yagcl.js',
-    library: 'YAGCL',
-    libraryTarget: 'umd',
+    libraryTarget: 'module',
     globalObject: 'this',
-    umdNamedDefine: true,
   },
   watchOptions: {
     aggregateTimeout: 600,

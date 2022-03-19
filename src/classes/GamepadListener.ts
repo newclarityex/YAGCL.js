@@ -50,6 +50,11 @@ export default class GamepadListener extends EventEmitter {
     checkButtonUpdates(newGamepad: Gamepad, oldGamepad: Gamepad) {
         for (let j = 0; j < newGamepad.buttons.length; j++) {
             let button = newGamepad.buttons[j];
+            this.emit("button", {
+                gamepad: newGamepad,
+                index: j,
+                value: button.value,
+            });
             if (button.pressed && !oldGamepad.buttons[j].pressed) {
                 this.emit("buttondown", {
                     gamepad: newGamepad,

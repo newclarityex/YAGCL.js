@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yet Another Game Controller Library</title>
 
-  <script src="../dist/yagcl.js"></script>
   <style>
     body {
       margin: 0;
@@ -55,8 +54,8 @@
       <div id="placeholder">Press any controller input</div>
     </div>
   </div>
-  <script>
-    const GamepadListener = window.YAGCL;
+  <script type="module">
+    import GamepadListener from "../dist/yagcl.js";
     let gamepadListener = new GamepadListener({ analog: false });
     gamepadListener.start();
     gamepadListener.on('connected', (gamepad) => {
