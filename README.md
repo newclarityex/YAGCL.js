@@ -5,7 +5,7 @@ Yet Another Game Controller Library is a simple library for managing the Gamepad
 ### Installation
 Install with npm using 
 ```
-npm install yagcl
+npm install yagcl.js
 ```
 or add directly in your HTML with:
 ```
@@ -24,7 +24,7 @@ import { GamepadListener } from 'yagcl.js';
 
 Node:
 ```
-const { GamepadListener } = require('yagcl');
+const { GamepadListener } = require('yagcl.js');
 ```
 
 ## Usage
