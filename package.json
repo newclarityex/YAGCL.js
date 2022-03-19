@@ -1,0 +1,23 @@
+{
+  "name": "yagcl",
+  "version": "1.0.0",
+  "description": "Yet Another Game Controller Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newclarityex/YAGCL.js.git"
+  },
+  "keywords": [
+    "gamepad",
+    "controller"
+  ],
+  "author": "newclarityex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/newclarityex/YAGCL.js/issues"
+  },
+  "homepage": "https://github.com/newclarityex/YAGCL.js#readme"
+}
