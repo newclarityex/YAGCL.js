@@ -84,3 +84,4 @@ export default class GamepadListener extends EventEmitter {
             }
         }
     }
+}
