@@ -1,0 +1,1 @@
+var e;e=function(){},"object"==typeof exports&&"object"==typeof module?module.exports=void 0:"function"==typeof define&&define.amd?define([],e):"object"==typeof exports?exports.yagcl=void 0:this.yagcl=void 0;

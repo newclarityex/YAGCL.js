@@ -1,15 +1,16 @@
 {
   "name": "yagcl.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Yet Another Game Controller Library",
   "main": "./dist/yagcl.js",
   "types": "./dist/yagcl.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "dist.browser"
   ],
   "scripts": {
     "build:dev": "webpack --mode=development --watch --progress",
-    "build:prod": "webpack --mode=production",
+    "build:prod": "webpack --mode=production && webpack --config browser.config.js --mode=production",
     "prepublishOnly": "webpack --mode=production",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
     "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
