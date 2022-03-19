@@ -13,8 +13,7 @@ const config = {
     path: path.resolve(__dirname, './dist.browser'),
     library: 'yagcl',
     filename: 'yagcl.js',
-    libraryTarget: 'umd',
-    globalObject: 'this',
+    libraryTarget: 'window',
   },
   watchOptions: {
     aggregateTimeout: 600,

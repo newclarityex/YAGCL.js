@@ -9,7 +9,7 @@
     "dist.browser"
   ],
   "scripts": {
-    "build:dev": "webpack --mode=development --watch --progress",
+    "build:dev": "webpack --mode=development && webpack --config browser.config.js --mode=development",
     "build:prod": "webpack --mode=production && webpack --config browser.config.js --mode=production",
     "prepublishOnly": "webpack --mode=production",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",

@@ -46,6 +46,7 @@
       align-items: flex-start;
     }
   </style>
+  <script src="../dist.browser/yagcl.js"></script>
 </head>
 
 <body>
@@ -54,8 +55,8 @@
       <div id="placeholder">Press any controller input</div>
     </div>
   </div>
-  <script type="module">
-    import GamepadListener from "../dist/yagcl.js";
+  <script>
+    let { GamepadListener } = yagcl;
     let gamepadListener = new GamepadListener({ analog: false });
     gamepadListener.start();
     gamepadListener.on('connected', (gamepad) => {
