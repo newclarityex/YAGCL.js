@@ -19,7 +19,7 @@ HTML5:
 
 ES6:
 ```
-import { GamepadListener } from 'yagcl';
+import { GamepadListener } from 'yagcl.js';
 ```
 
 Node:
