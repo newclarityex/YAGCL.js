@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GeorgianStan/framework-for-building-libraries.git"
+    "url": "git+https://github.com/newclarityex/YAGCL.js.git"
   },
   "keywords": [
     "gamepad",
@@ -44,7 +44,7 @@
     "prettier": "^2.2.1",
     "ts-loader": "^8.1.0",
     "typescript": "^4.2.4",
-    "webpack": "^5.31.2",
+    "webpack": "^5.70.0",
     "webpack-cli": "^4.6.0"
   }
 }
