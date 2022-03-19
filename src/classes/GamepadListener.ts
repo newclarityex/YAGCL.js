@@ -71,12 +71,12 @@ export default class GamepadListener extends EventEmitter {
     checkAxisUpdates(newGamepad: Gamepad) {
         for (let j = 0; j < newGamepad.axes.length; j++) {
             let axis = newGamepad.axes[j];
-            if (Math.abs(axis) <= this.options.deadzone) continue;
             let axisValue = axis;
 
             if (!this.options.analog) {
-                axisValue = axis > 0 ? 1 : axis < 0 ? -1 : 0;
+                axisValue = axis > this.options.deadzone ? 1 : axis < -this.options.deadzone ? -1 : 0;
             }
+
             if (this.axesTracker[newGamepad.index] === null || Math.abs(axisValue - this.axesTracker[newGamepad.index][j]) >= this.options.precision) {
                 this.axesTracker[newGamepad.index][j] = axisValue;
                 this.emit("axis", {
