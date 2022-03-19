@@ -1,6 +1,6 @@
 {
   "name": "yagcl.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yet Another Game Controller Library",
   "main": "./dist/yagcl.js",
   "types": "./dist/yagcl.d.ts",
