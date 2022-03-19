@@ -7,12 +7,12 @@ Install with npm using
 ```
 npm install yagcl.js
 ```
-or add directly in your HTML with:
+or add directly in your HTML with (WIP):
 ```
 <script src="yagcl.js"></script>
 ```
 ### Importing
-HTML5:
+HTML5 (WIP):
 ```
 <script>const { GamepadListener } = yagcl;</script>
 ```
