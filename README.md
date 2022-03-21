@@ -53,11 +53,11 @@ listener.on('buttondown', ({ gamepad, index, value }) => {
 ### gamepadconnected
 Triggered when a gamepad is connected.
 <br>
-Returns GamepadEvent object.
+Returns `GamepadEvent` object.
 ### gamepaddisconnected
 Triggered when a gamepad is disconnected.
 <br>
-Returns GamepadEvent object.
+Returns `GamepadEvent` object.
 ### buttondown
 Triggered when a button is pressed.
 <br>
